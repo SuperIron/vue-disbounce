@@ -1,18 +1,40 @@
 # vue-disbounce
 
-> A Vue.js project
+## 概述
 
-## Build Setup
+`vue-disbounce`是一款基于`Vue.js`的自定义组件，可以有效避免触发`h5`页面在`ios`浏览器内置的下拉`bounce`效果。
 
-``` bash
-# install dependencies
-npm install
+## 安装
 
-# serve with hot reload at localhost:8080
-npm run dev
+`npm i vue-disbounce`
 
-# build for production with minification
-npm run build
+## 配置
+
+| 属性             | 说明               | 类型   | 必填 | 可选值 | 默认值  |
+| ---------------- | ------------------ | ------ | ---- | ------ | ------- |
+| background-color | wrapper 的背景颜色 | String | 否   | -      | #ffffff |
+
+## 调用
+
+```html
+<template>
+    <VueDisbounce id="app">
+        <!-- 如果有使用路由， -->
+        <router-view />
+    </VueDisbounce>
+</template>
+
+<script>
+    import VueDisbounce from "vue-disbounce";
+
+    export default {
+        components: {
+            VueDisbounce
+        }
+    };
+</script>
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 作者
+
+SuperIron

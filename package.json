@@ -1,22 +1,23 @@
 {
     "name": "vue-disbounce",
-    "description": "A Vue.js project",
-    "version": "1.0.1",
+    "description": "`vue-disbounce`是一款基于`Vue.js`的自定义组件，可以有效避免触发`h5`页面`ios`浏览器内置的下拉`bounce`效果",
+    "version": "1.0.2",
     "author": "SuperIron",
     "license": "MIT",
+    "main": "dist/vue-disbounce.min.js",
     "private": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SuperIron/vue-disbounce"
+    },
     "scripts": {
-        "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --hot",
         "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
     },
     "dependencies": {
         "vue": "^2.5.11"
     },
-    "browserslist": [
-        "> 1%",
-        "last 2 versions",
-        "not ie <= 8"
-    ],
+    "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
     "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",

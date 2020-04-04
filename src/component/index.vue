@@ -1,7 +1,10 @@
 <template>
-	<div class="vd">
+	<div
+		:style="{'background-color':backgroundColor }"
+		class="vd-wrapper"
+	>
 		<div
-			class="vd-content"
+			class="vd"
 			ref="vd"
 		>
 			<slot></slot>
@@ -13,6 +16,13 @@
 export default {
 	name: "vd",
 
+	props: {
+		backgroundColor: {
+			type: String,
+			default: "#ffffff"
+		}
+	},
+
 	data() {
 		return {};
 	},
@@ -21,7 +31,7 @@ export default {
 		this.vd = this.$refs["vd"];
 		this.vd.addEventListener("touchstart", this.touchstartEvent);
 		this.vd.addEventListener("touchmove", this.touchmoveEvent, {
-			passive: false // 阻止默认事件时，设置passive为false,提高性能
+			passive: false // 阻止默认事件时，设置passive为false，提高性能
 		});
 	},
 
@@ -64,11 +74,11 @@ export default {
 </script>
 
 <style scoped="scoped">
-.vd {
+.vd-wrapper {
 	height: 100vh;
 }
 
-.vd-content {
+.vd {
 	width: 100%;
 	height: 100%;
 	overflow-y: auto;
